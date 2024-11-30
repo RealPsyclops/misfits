@@ -1,3 +1,4 @@
+/* Global reset and font settings */
 * {
     margin: 0;
     padding: 0;
@@ -5,62 +6,32 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Body background image */
 body {
     background-image: url('images/background.webp');
     background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
 }
 
-.container {
-    max-width: 1200px;
-    max-height: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h1 {
-    color: #2d3748;
-    margin-bottom: 2rem;
-    font-weight: 600;
-    font-size: 2.5rem;
-    letter-spacing: -0.5px;
-    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-.iframe-container {
-    background: white;
-    border-radius: 16px;
-    box-shadow: 
-        0 10px 30px rgba(0, 0, 0, 0.08),
-        0 0 1px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 2rem;
-    box-shadow: 10px 10px 30px;
-}
-
-.iframe-container:hover {
-    transform: translateY(-2px);
-    box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.12),
-        0 0 1px rgba(0, 0, 0, 0.1);
-}
-
-iframe {
-    display: block;
-    border-radius: 16px;
-}
-
-@media (max-width: 500px) {
-    
-    h1 {
-        font-size: 2rem;
-        margin: 1rem 0 1.5rem;
-    }
+/* Header containing logo and title */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    padding-bottom: 20px; /* Adds space below the title */
 }
 
 .logo {
-    margin-bottom: 0rem;
+    margin-bottom: 10px;
 }
 
 .logo img {
@@ -71,9 +42,127 @@ iframe {
 
 .widget-title {
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 1000;
     font-size: 1.5rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 0.5rem;
-} 
+    margin-bottom: 5rem; /* Space below title */
+}
+
+/* Container for token sale and DEX widget */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0; /* Remove space between panels */
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 10rem; /* Space below header */
+    border-radius: 16px;
+    background-color: rgba(255, 86, 2, 0);
+}
+
+/* Styles for iframe and token sale panel */
+.iframe-container,
+.token-sale-panel {
+    width: 400px; /* Match widget size */
+    height: 650px; /* Match widget height */
+    background-color: rgba(255, 86, 2, 0);
+    border: 3px solid black;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px
+}
+
+iframe {
+    display: block;
+    border-radius: 16px;
+    border: 3px solid black;
+}
+
+/* Explainer panel specific styling */
+.token-sale-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 650px;
+    overflow: auto;
+    background-color: rgba(255, 86, 2, 0.5); /* Orange background */
+    color: white; /* White text */
+    font-family: 'Roboto', sans-serif; /* Roboto font */
+    border-radius: 16px;
+    margin-left: 1rem;
+}
+
+.token-sale-panel h2 {
+    font-size: 20px; /* Smaller text */
+    font-style: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.token-sale-panel p {
+    margin-top: 2rem;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.batch-calculator button {
+    background-color: #ff7f32;
+    color: white;
+    border: 2px solid #ff7f32; /* Orange border */
+;
+    padding: 5px 10px; /* Reduced padding */
+    font-size: 12px; /* Smaller text */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.batch-calculator button:hover {
+    background-color: #e66a2c; /* Darker shade for hover */
+}
+
+/* Style for input fields */
+#batchCount,
+#btcAmount {
+    background-color: #ff5602; /* Orange background */
+    color: white; /* White text */
+    border: 2px solid #ffffff; /* Orange border */
+    border-radius: 8px;
+    padding: 5px 10px; /* Reduced padding */
+    font-size: 14px; /* Smaller text */
+    width: 60px; /* Match width */
+    text-align: center; /* Center the text inside */
+}
+
+.batch-calculator {
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.calculator-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the entire content vertically */
+    align-items: center; /* Center the entire content horizontally */
+}
+
+#batchCount {
+    text-align: center;
+    width: 60px; /* Ensures only enough space for three digits */
+}
+
+/* Hover effect for iframe */
+.iframe-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2rem;
+        margin: 1rem 0 1.5rem;
+    }
+}

@@ -6,21 +6,52 @@
     <title>MISFIT•MINDSET</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/gh/Networth-is/satsterminal-client@latest/main.js"></script>
+    <script src="code.js"></script> <!-- Your custom JavaScript -->
 </head>
 <body>
-    <div class="container">
+    <!-- Top section with logo and title -->
+    <div class="header">
         <div class="logo">
             <img src="images/logo.webp" alt="SatsTerminal Logo" width="90" height="90"/>
         </div>
         <div class="widget-title">BUY MISFIT•MINDSET</div>
+    </div>
+
+    <!-- Main container with DEX widget and token sale panel -->
+    <div class="container">
+        <!-- DEX Widget -->
         <div class="iframe-container">
             <iframe 
                 src="https://beta.satsterminal.com/en?embed=true&themeId=106&dark=true&runeName=MISFIT•MINDSET" 
-                width="350" 
+                width="400" 
                 height="650"
-                style="border: 3px solid black;">
+                style="border: 0;">
             </iframe>
+        </div>
+
+        <!-- Token Sale Panel -->
+        <div class="token-sale-panel">
+            <div class="instructions">
+            <h2>MISFIT•MINDSET Token Sale</h2>
+            <p class="token-panel-text">
+                This is a token sale for MISFIT•MINDSET. Each batch consists of 2300 tokens and sells for 
+                <strong>0.000258 BTC</strong>. SatsTerminal and Misfits are not collecting any fees until all lots are sold.
+            </p>
+                <div class="calculator-all">
+                    <div class="batch-calculator">
+                        <label for="batchCount">Batches:</label>
+                        <button onclick="updateBatchCount(-1)">−</button>
+                        <input type="number" id="batchCount" value="1" readonly />
+                        <button onclick="updateBatchCount(1)">+</button>
+                        <br>
+                        <br>
+                            Total: <span id="btcAmount">0.000258</span> BTC
+                            <button onclick="copyToClipboard()">Copy</button>
+                        </br>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
-</html> 
+</html>
