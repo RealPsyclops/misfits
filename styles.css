@@ -132,7 +132,7 @@ iframe {
     border: 0px solid #ffffff; /* Orange border */
     border-radius: 8px;
     padding: 5px 10px; /* Reduced padding */
-    font-size: 14px; /* Smaller text */
+    font-size: 16px; /* Smaller text */
     width: 20; /* Match width */
     text-align: center; /* Center the text inside */
 }
@@ -150,7 +150,7 @@ iframe {
 }
 
 td {
-    padding: 0.5rem;
+    padding: 0.2rem;
     justify-content: center;
 }
 
