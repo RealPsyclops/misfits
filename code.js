@@ -10,6 +10,9 @@ function updateBatchCount(change) {
 
     const totalBTC = (batchCount * pricePerBatch).toFixed(6); // Multiply correctly and format
     btcAmountField.textContent = totalBTC;
+
+    const totalTokens = (batchCount * 2300);
+    totalMisfitMindset.textContent = totalTokens;
 }
 
 function copyToClipboard() {

@@ -46,7 +46,7 @@ body {
     font-size: 1.5rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 1rem; /* Space below title */
+    margin-bottom: 5rem; /* Space below title */
 }
 
 /* Container for token sale and DEX widget */
@@ -125,14 +125,15 @@ iframe {
 
 /* Style for input fields */
 #batchCount,
-#btcAmount {
+#btcAmount,
+#totalMisfitMindset {
     background-color: #ff5602; /* Orange background */
     color: white; /* White text */
-    border: 2px solid #ffffff; /* Orange border */
+    border: 0px solid #ffffff; /* Orange border */
     border-radius: 8px;
     padding: 5px 10px; /* Reduced padding */
     font-size: 14px; /* Smaller text */
-    width: 60px; /* Match width */
+    width: 20; /* Match width */
     text-align: center; /* Center the text inside */
 }
 
@@ -148,9 +149,14 @@ iframe {
     align-items: center; /* Center the entire content horizontally */
 }
 
+td {
+    padding: 0.5rem;
+    justify-content: center;
+}
+
 #batchCount {
     text-align: center;
-    width: 60px; /* Ensures only enough space for three digits */
+    width: 50px; /* Ensures only enough space for three digits */
 }
 
 /* Hover effect for iframe */

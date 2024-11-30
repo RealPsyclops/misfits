@@ -39,15 +39,29 @@
             </p>
                 <div class="calculator-all">
                     <div class="batch-calculator">
-                        <label for="batchCount">Batches:</label>
-                        <button onclick="updateBatchCount(-1)">−</button>
-                        <input type="number" id="batchCount" value="1" readonly />
-                        <button onclick="updateBatchCount(1)">+</button>
-                        <br>
-                        <br>
-                            Total: <span id="btcAmount">0.000258</span> BTC
-                            <button onclick="copyToClipboard()">Copy</button>
-                        </br>
+                        <table>
+                            <tr>
+                                <td align="right"><label for="batchCount">Batches: </label></td>
+                                <td> 
+                                    <button onclick="updateBatchCount(-1)">−</button>
+                                    <input type="number" id="batchCount" value="1" readonly/>
+                                    <button onclick="updateBatchCount(1)">+</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">Total BTC: </td>
+                                <td>
+                                    <span id="btcAmount">0.000258</span>
+                                    <button onclick="copyToClipboard()">Copy</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">Total $MISFIT: </td>
+                                <td>
+                                    <span id="totalMisfitMindset">2300</span>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
