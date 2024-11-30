@@ -27,7 +27,6 @@ body {
     position: absolute;
     z-index: 10;
     top: 20px;
-    padding-bottom: 1rem; /* Adds space below the title */
 }
 
 .logo {
