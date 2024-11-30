@@ -8,7 +8,7 @@ function updateBatchCount(change) {
     batchCount = Math.max(1, batchCount + change); // Prevent less than 1 batch
     batchCountField.value = batchCount;
 
-    const totalBTC = (batchCount * pricePerBatch).toFixed(6); // Multiply correctly and format
+    const totalBTC = (batchCount * pricePerBatch + 0.000001).toFixed(6); // Multiply correctly and format
     btcAmountField.textContent = totalBTC;
 
     const totalTokens = (batchCount * 2300);
