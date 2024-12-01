@@ -27,6 +27,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 10px; /* Space between the logo and title */
+    margin-top: 2rem; /* Adds 2rem padding from the top */
     margin-bottom: 20px; /* Space below the header */
 }
 
