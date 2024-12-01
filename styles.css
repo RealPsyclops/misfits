@@ -13,11 +13,11 @@ body {
     background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers everything vertically */
+    justify-content: flex-start; /* Align items at the top */
     align-items: center;
-    height: 100vh; /* Full viewport height */
-    padding: 20px; /* Padding for breathing room */
-    overflow: hidden; /* Prevents horizontal overflow */
+    min-height: 100vh; /* Ensures the body takes at least full screen height */
+    padding: 20px; /* Adds padding for breathing room */
+    overflow-y: auto; /* Enables vertical scrolling */
 }
 
 /* Header containing logo and title */
