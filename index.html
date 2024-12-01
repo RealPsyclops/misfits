@@ -9,15 +9,16 @@
     <script src="code.js"></script> <!-- Your custom JavaScript -->
 </head>
 <body>
-    <!-- Top section with logo and title -->
+    <!-- Header Section -->
     <div class="header">
         <div class="logo">
-            <img src="images/logo.webp" alt="SatsTerminal Logo" width="90" height="90"/>
+            <img src="images/logo.webp" alt="MISFIT•MINDSET Logo" width="90" height="90"/>
         </div>
         <div class="widget-title">BUY MISFIT•MINDSET</div>
     </div>
+    <p>
 
-    <!-- Main container with DEX widget and token sale panel -->
+    <!-- Main Container -->
     <div class="container">
         <!-- DEX Widget -->
         <div class="iframe-container">
@@ -32,11 +33,11 @@
         <!-- Token Sale Panel -->
         <div class="token-sale-panel">
             <div class="instructions">
-            <h2>MISFIT•MINDSET Token Sale</h2>
-            <p class="token-panel-text">
-                This is a token sale for <strong>MISFIT•MINDSET</strong>. Each batch consists of <strong>2,300</strong> tokens and sells for 
-                <strong>0.000258 BTC</strong>.
-            </p>
+                <h2>MISFIT•MINDSET Token Sale</h2>
+                <p class="token-panel-text">
+                    This is a token sale for <strong>MISFIT•MINDSET</strong>. Each batch consists of <strong>2,300</strong> tokens and sells for 
+                    <strong>0.000259 BTC</strong>.
+                </p>
                 <div class="calculator-all">
                     <div class="batch-calculator">
                         <table>
@@ -44,29 +45,36 @@
                                 <td align="right"><label for="batchCount"><strong>Batches: </strong></label></td>
                                 <td> 
                                     <button onclick="updateBatchCount(-1)">−</button>
-                                <strong>
-                                    <input type="number" id="batchCount" value="1" readonly/>
-                                </strong>
+                                    <strong>
+                                        <input type="number" id="batchCount" value="1" readonly/>
+                                    </strong>
                                     <button onclick="updateBatchCount(1)">+</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td align="right"><strong>Total BTC: </strong></td>
                                 <td>
-                                    <span id="btcAmount"><strong>0.000258</strong></span>
+                                    <strong><span id="btcAmount">0.000258</span></strong>
                                     <button onclick="copyToClipboard()">Copy</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td align="right"><strong>Total $MISFIT: </strong></td>
                                 <td>
-                                    <span id="totalMisfitMindset"><strong>2300</strong></span>
+                                    <strong><span id="totalMisfitMindset">2300</span></strong>
                                 </td>
                             </tr>
                         </table>
                         <p class="token-panel-text">
+                            <i>
                             <strong>NOTE:</strong> Sats Terminal and Misfits are not collecting any fees until all lots are sold. Any fees come from Magic Eden, where the tokens are listed, and the Bitcoin Network.
+                            </i>
                         </p>
+                        <br class="token-panel-text">
+                            <center>
+                                <img src="images/st_logo.svg" alt="SatsTerminal Logo" width="100" height="20"/>
+                            </center>
+                        </br>
                     </div>
                 </div>
             </div>

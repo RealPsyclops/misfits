@@ -12,10 +12,12 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     flex-direction: column;
+    justify-content: center; /* Centers everything vertically */
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px; /* Padding for breathing room */
+    overflow: hidden; /* Prevents horizontal overflow */
 }
 
 /* Header containing logo and title */
@@ -24,18 +26,12 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    z-index: 10;
-    top: 20px;
-}
-
-.logo {
-    margin-bottom: 10px;
+    gap: 10px; /* Space between the logo and title */
+    margin-bottom: 20px; /* Space below the header */
 }
 
 .logo img {
-    margin-top: 1rem;
-    max-width: 250px;
+    max-width: 200px; /* Scales the logo proportionally */
     height: auto;
 }
 
@@ -45,58 +41,58 @@ body {
     font-size: 1.5rem;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    text-align: center;
 }
 
-/* Container for token sale and DEX widget */
+/* Main container for the widget and token sale panel */
 .container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 0; /* Remove space between panels */
+    gap: 20px; /* Space between the panels */
     max-width: 1200px;
     width: 100%;
-    margin-top: 10rem; /* Space below header */
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
     border-radius: 16px;
-    background-color: rgba(255, 86, 2, 0);
+    padding: 10px;
 }
 
-/* Styles for iframe and token sale panel */
+/* DEX widget and token sale panel styles */
 .iframe-container,
 .token-sale-panel {
-    width: 400px; /* Match widget size */
-    height: 650px; /* Match widget height */
-    background-color: rgba(255, 86, 2, 0);
+    width: 400px;
+    height: 650px;
+    background-color: rgba(255, 86, 2, 0); /* Transparent background */
     border: 3px solid black;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 16px
+    border-radius: 16px;
 }
 
 iframe {
-    display: block;
+    width: 100%;
+    height: 100%;
     border-radius: 16px;
     border: 3px solid black;
 }
 
-/* Explainer panel specific styling */
+/* Token sale panel */
 .token-sale-panel {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    height: 400px;
+    height: 450px; /* Fixed height for content */
     overflow: auto;
     background-color: rgba(255, 86, 2, 0.5); /* Orange background */
     color: white; /* White text */
-    font-family: 'Roboto', sans-serif; /* Roboto font */
+    font-family: 'Roboto', sans-serif;
     border-radius: 16px;
     margin-left: 1rem;
 }
 
 .token-sale-panel h2 {
-    font-size: 20px; /* Smaller text */
-    font-style: bold;
+    font-size: 20px;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -104,23 +100,8 @@ iframe {
 .token-sale-panel p {
     margin-top: 2rem;
     font-size: 14px;
-    font-style: normal;
 }
 
-.batch-calculator button {
-    background-color: #ff7f32;
-    color: white;
-    border: 2px solid #ff7f32; /* Orange border */
-;
-    padding: 5px 10px; /* Reduced padding */
-    font-size: 12px; /* Smaller text */
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.batch-calculator button:hover {
-    background-color: #e66a2c; /* Darker shade for hover */
-}
 
 /* Style for input fields */
 #batchCount,
@@ -158,16 +139,64 @@ td {
     width: 50px; /* Ensures only enough space for three digits */
 }
 
-/* Hover effect for iframe */
-.iframe-container:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
+/* Batch calculator button styles */
+.batch-calculator button {
+    background-color: #ff7f32;
+    color: white;
+    border: 2px solid #ff7f32; /* Orange border */
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-/* Adjustments for smaller screens */
+.batch-calculator button:hover {
+    background-color: #e66a2c; /* Darker hover shade */
+}
+
+.batch-calculator input {
+    text-align: center;
+    width: 50px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-height: 700px) {
+    body {
+        height: auto; /* Allows scrolling on short screens */
+    }
+
+    .iframe-container,
+    .token-sale-panel {
+        height: 500px; /* Reduces panel height */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack panels vertically */
+        align-items: center;
+        gap: 10px; /* Reduce gaps for smaller screens */
+    }
+
+    .iframe-container,
+    .token-sale-panel {
+        width: 90%; /* Scale panels to fit narrow screens */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .token-sale-panel {
+        margin-left: 0; /* Remove extra margin for stacking */
+    }
+}
+
 @media (max-width: 500px) {
-    h1 {
-        font-size: 2rem;
-        margin: 1rem 0 1.5rem;
+    .logo img {
+        max-width: 150px; /* Scale down the logo further */
+    }
+
+    .widget-title {
+        font-size: 1.2rem; /* Smaller font for title */
     }
 }
